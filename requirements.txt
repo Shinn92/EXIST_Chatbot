@@ -1,7 +1,7 @@
 pip==23.0.1
 numpy==1.21.4 
 pandas==1.3.5 
-openai==0.11.71 
+openai==0.27.0 
 streamlit==1.2.02 
 requests==2.26.0 
 num2words==0.5.103
