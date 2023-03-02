@@ -46,7 +46,8 @@ messages = [
 ]
 
 #df_try = pd.read_csv('df_chatbot_exist_v2.csv', encoding='utf-8')
-df_try = pd.read_csv(io.StringIO(content))
+#df_try = pd.read_csv(io.StringIO(content))
+df_try =pd.read_csv('df_chatbot_exist_v3.csv')
 #df_try = pd.read_csv(csv_file, encoding='utf-8')
 all_embeddings = np.load(npy_url, allow_pickle=True)
 #all_embeddings = np.load(npy_file, allow_pickle=True)
