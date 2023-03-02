@@ -6,3 +6,4 @@ streamlit==1.18.0
 requests==2.26.0 
 num2words==0.5.12
 matplotlib==3.7.0
+plotly==5.5.0
