@@ -31,8 +31,8 @@ req_csv = requests.get(csv_url)
 csv_file = "temporaryCSV.csv"
 npy_file = "temporaryNpy.npy"
 
-res = requests.get(csv_url)
-content = res.content.decode("utf-8")
+result = requests.get(csv_url)
+content = result.content.decode("utf-8")
 
 
 #with open(csv_file, 'wb') as f:
