@@ -5,28 +5,15 @@
 
 
 
-
-import os
 import time
 import pandas as pd
 import openai
-import re
-import requests
-import sys
-from num2words import num2words
 import numpy as np
-from openai.embeddings_utils import get_embedding, cosine_similarity
-import tiktoken
-import textwrap
-import json
 import streamlit as st
 import requests
 
-from nltk.stem import PorterStemmer
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-
+from openai.embeddings_utils import cosine_similarity
+from num2words import num2words
 
 
 API_KEY = st.secrets["api_key"]
