@@ -29,7 +29,7 @@ from nltk.stem import WordNetLemmatizer
 
 
 
-
+API_KEY = st.secrets["api_key"]
 
 csv_url = 'https://github.com/Shinn92/EXIST_Chatbot/blob/main/Files/df_chatbot_exist_v2.csv'
 npy_url = 'https://github.com/Shinn92/EXIST_Chatbot/blob/main/Files/embeddings.npy'
