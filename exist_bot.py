@@ -31,8 +31,8 @@ from nltk.stem import WordNetLemmatizer
 
 
 
-csv_url = 'https://www.meercommunity.de/wp-content/uploads/2023/02/df_chatbot_exist_v2.csv'
-npy_url = 'https://www.meercommunity.de/wp-content/uploads/2023/03/embeddings.npy'
+csv_url = 'https://github.com/Shinn92/EXIST_Chatbot/blob/main/Files/df_chatbot_exist_v2.csv'
+npy_url = 'https://github.com/Shinn92/EXIST_Chatbot/blob/main/Files/embeddings.npy'
 start_time=time.time()
 
 ########### This helps takes care of removing metadata
