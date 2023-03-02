@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-
+import io
 import time
 import pandas as pd
 import openai
