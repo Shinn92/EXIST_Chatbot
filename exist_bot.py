@@ -31,8 +31,12 @@ req_csv = requests.get(csv_url)
 csv_file = "temporaryCSV.csv"
 npy_file = "temporaryNpy.npy"
 
-with open(csv_file, 'wb') as f:
-    f.write(req_csv.content)
+res = requests.get(csv_url)
+content = res.content.decode("utf-8")
+
+
+#with open(csv_file, 'wb') as f:
+    #f.write(req_csv.content)
     
 with open(npy_file, 'wb') as f:
     f.write(req_npy.content)
@@ -42,7 +46,8 @@ messages = [
 ]
 
 #df_try = pd.read_csv('df_chatbot_exist_v2.csv', encoding='utf-8')
-df_try = pd.read_csv(csv_file, encoding='utf-8')
+df_try = pd.read_csv(io.StringIO(content))
+#df_try = pd.read_csv(csv_file, encoding='utf-8')
 all_embeddings = np.load(npy_file, allow_pickle=True)
 df_try['ada_v2_embedding'] = all_embeddings
 
