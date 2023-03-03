@@ -17,7 +17,7 @@ from num2words import num2words
 
 
 openai.api_key = st.secrets["api_key"]
-#openai.api_key = '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'
+
 
 start_time=time.time()
 
