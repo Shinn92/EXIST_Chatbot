@@ -38,6 +38,63 @@ df_try =pd.read_csv('df_chatbot_exist_v3.csv')
 all_embeddings = np.load('embeddings.npy', allow_pickle=True)
 df_try['ada_v2_embedding'] = all_embeddings
 
+# Set page config
+st.set_page_config(page_title="EXIST-Chatbot", page_icon=":robot_face:", layout="wide")
+
+# Define page layout
+def page_layout():
+    # Define colors
+    bg_color = "#211f39" # marine blue
+    text_color = "#ffffff" # white
+    
+    # Define logos
+    logo1 = "https://www.example.com/logo1.png"
+    logo2 = "https://www.example.com/logo2.png"
+    
+    # Set page background color
+    page_bg = f"background-color: {bg_color};"
+    st.markdown(f"<style>{page_bg}</style>", unsafe_allow_html=True)
+    
+    # Create header section
+    header_bg = f"background-color: #FFFFFF; border-radius: 5px; padding: 10px;"
+    st.markdown(f"<div style='{header_bg}'>", unsafe_allow_html=True)
+    col1, col2 = st.beta_columns([1, 3])
+    with col1:
+        st.image(logo1, width=100)
+    with col2:
+        st.write("")
+        st.title("EXIST-Chatbot")
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Create input field section
+    input_bg = f"background-color: #FFFFFF; border-radius: 5px; padding: 10px; margin-top: 20px;"
+    st.markdown(f"<div style='{input_bg}'>", unsafe_allow_html=True)
+    st.write("Gib deine Nachricht ein:")
+    message = st.text_input("")
+    if st.button("Senden"):
+        # Process message
+        pass # Replace with your code
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Create output field section
+    output_bg = f"background-color: #FFFFFF; border-radius: 5px; padding: 10px; margin-top: 20px;"
+    st.markdown(f"<div style='{output_bg}'>", unsafe_allow_html=True)
+    st.write("Antwort:")
+    st.write("") # Replace with your output
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Create footer section
+    footer_bg = f"background-color: #FFFFFF; border-radius: 5px; padding: 10px; margin-top: 20px;"
+    st.markdown(f"<div style='{footer_bg}'>", unsafe_allow_html=True)
+    col1, col2 = st.beta_columns([3, 1])
+    with col1:
+        st.write("")
+    with col2:
+        st.image(logo2, width=100)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+# Render page layout
+page_layout()
 
 
 def get_embedding(text, model="text-embedding-ada-002"):
